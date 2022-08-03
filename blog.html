@@ -5,8 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{      /*selector para todas las etiquetas (universal)*/ 
+            background: papayawhip;
+        }
+        div p { /*Para todos los descendientes o hijos de una etiqueta*/
+            color: red;
+        }
+        header{           /* Selector estandar para etiquetas*/
+            color: blue;
+            background: pink;
+        }
+        .upper{ /* Selecciona la clase especificada (clase)*/
+            background: slategray;
+        }
+        #onepunchman{    /*Selector para una etiqueta en especial (ID)*/
+            font-style: oblique;
+            font-weight: bold;
+            color: blue;
+
+        }
+        a[href="https://www.w3schools.com/css/css_font_pairings.asp"]{ /*selector para atributo*/
+            color: green;
+            
+        }
+
+        div > p {
+            font-display:initial;
+
+        }        
+    </style>
 </head>
 <body>
-    <header> </header>
+    <header> platzi</header>
+    <div class="upper">
+        ASDFGFP
+        <p>dsga</p>
+        fffffff
+        <p>asdfa</p>
+    </div>
+    <p>adfggg</p>
+    <div class="upper">
+        ASDFGFP
+        <p>dsga</p>
+        fffffff
+        <p>asdfa</p>
+    </div>
+    <section>
+        <h1>|again 1</h1>
+    </section>
+    <p>paradigma</p>
+    <ol>
+        <li id="onepunchman">one</li>
+        <li>two</li>
+        <li>three</li>    
+    </ol>
+    <div>
+        <h1>Saitama</h1>
+        <p>Saitamita JR.</p>
+        <h2>genos</h2>
+        pmidoen
+    </div>
+    <a href="https://www.w3schools.com/css/css_font_pairings.asp">w3school</a>
+
 </body>
 </html>
