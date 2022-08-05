@@ -1,0 +1,144 @@
+header{           /* Selector estandar para etiquetas*/
+    color: blue;
+    background: pink;
+}
+*{      /*selector para todas las etiquetas (universal)*/ 
+    background: papayawhip;
+}
+
+.upper{ /* Selecciona la clase especificada (clase)*/
+    background: slategray;
+    
+}
+
+p::first-letter{
+    font-size: xx-large;
+    font-family: fantasy;
+    font-variant-caps: small-caps;
+    
+}
+
+#imagenes{
+    margin: 2rem;
+}
+
+#onepunchman{    /*Selector para una etiqueta en especial (ID)*/
+    font-style: oblique;
+    font-weight: bold;
+    color: blue;
+
+}
+
+div p { /*Para todos los descendientes o hijos de una etiqueta*/
+    color: red;
+}
+
+.url{
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+}
+
+a {
+    background: peru;
+    width: 350px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    
+}
+
+
+
+section > input { /*hijo directo*/
+    font-display:initial;
+    color: chartreuse;
+    width: 500px;
+    
+}   
+
+
+section + div { /* etiqueta vecina o adyacente a la primeramente declarada*/
+    font-size: xx-large;
+}
+
+p ~ ol { /* para todos adyacentes después de la etiqueta declarada al inicio*/
+
+    font-size: x-large;
+    color: blueviolet;
+
+}
+
+p:hover{
+    color: brown;
+    font-size: xx-large;
+}
+
+ol li:nth-child(2){ 
+    color: aquamarine
+}
+
+
+li::before{
+    content:"\1F600";
+}
+li::after{
+    content:"🔥";
+}
+
+::placeholder{
+    color: brown;
+}
+
+/*practica con grid*/
+
+.container{
+    display: grid;
+    font-size: large;
+    background: whitesmoke;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 5px ridge grey;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;    
+}
+.item{
+    display: flex;
+    background: plum;
+    height: 40px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid rosybrown;
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
+    
+}
+.container .item:nth-child(1){
+    grid-column: 1/2;
+}
+
+.container .item:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.container .item:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.container .item:nth-child(4){
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
