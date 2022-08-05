@@ -6,38 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{      /*selector para todas las etiquetas (universal)*/ 
-            background: papayawhip;
-        }
-        div p { /*Para todos los descendientes o hijos de una etiqueta*/
-            color: red;
-        }
         header{           /* Selector estandar para etiquetas*/
             color: blue;
             background: pink;
         }
+        *{      /*selector para todas las etiquetas (universal)*/ 
+            background: papayawhip;
+        }
+
         .upper{ /* Selecciona la clase especificada (clase)*/
             background: slategray;
+            
         }
+
+        p::first-letter{
+            font-size: xx-large;
+            font-family: fantasy;
+            font-variant-caps: small-caps;
+            
+        }
+
+        #imagenes{
+            margin: 2rem;
+        }
+
         #onepunchman{    /*Selector para una etiqueta en especial (ID)*/
             font-style: oblique;
             font-weight: bold;
             color: blue;
 
         }
-        a[href="https://www.w3schools.com/css/css_font_pairings.asp"]{ /*selector para atributo*/
-            color: green;
-            
+
+        div p { /*Para todos los descendientes o hijos de una etiqueta*/
+            color: red;
+        }
+        
+        
+        a[href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors"]{ /*selector para atributo*/
+            color: yellowgreen;
+            background-color: black;
+            margin: 4em;
         }
 
-        div > p { /*hijo directo*/
+        section > input { /*hijo directo*/
             font-display:initial;
             color: chartreuse;
-            font-size: x-large;
+            width: 500px;
+            
+        }   
 
-        }    
 
-        section + p { /* etiqueta vecina o adyacente a la primeramente declarada*/
+        section + div { /* etiqueta vecina o adyacente a la primeramente declarada*/
             font-size: xx-large;
         }
         
@@ -57,14 +76,11 @@
             color: aquamarine
         }
 
-        p::first-letter{
-            font-size: xx-large;
-            font-family: fantasy;
-        }
-        p::before{
+        
+        li::before{
             content:"\1F600";
         }
-        p::after{
+        li::after{
             content:"🔥";
         }
         
@@ -75,43 +91,41 @@
     </style>
 </head>
 <body>
-    <header> platzi</header>
-    <input type="text" placeholder="Insertar texto" size="100px">
+    <header>Aqui se emplea el selector estandar, el cual en este caso es aplicado para todas las etiquetas header</header>
+    Se emplea el selector universal * para darle un formato que abarca todos los elementos de esta sección, para este caso se da un fondo papayawhip.
+    <p class="upper"> en este caso se define la clase upper, en la cual se define que el fondo para este sea gris, así mismo es afectado por el pseudo selector de elemento que coloca la primera letra con una fuente más grande, de otra familia y en mayuscula, será aplicado a todas las etiquetas p</p>
+    <p id="onepunchman"> para este caso se aplican los estilos para una etiqueta con el id onepunchman, por ello esta etiqueta p es diferente a la anterior</p>
+    <p>mediante el pseudoselector de clase para la etiqueta p, se logra que al pasar el mouse por encima del contenido de dichas etiquetas cambien de tamaño y color (el color siempre y cuando sea de menor especificidad)</p>
 
-    <div class="upper">
-        ASDFGFP
-        <p>dsga</p>
-        fffffff
-        <p>asdfa</p>
-    </div>
-    <p>adfggg</p>
-    <div class="upper">
-        ASDFGFP
-        <p>dsga</p>
-        fffffff
-        <p>asdfa</p>
-    </div>
-    <p>adfggg</p>
-    <p>adfggg</p>
-    <section>
-        <h1>|again 1</h1>
+    
+    <section id="imagenes">
+        <input type="text" name="datos aleatorios" placeholder="se logra cambiar el color del placeholder gracias al uso del pseudoselector para elemento de dicho atributo">
     </section>
-    <p>paradigma</p>
-    <ol>
-        <li id="onepunchman">one</li>
-        <li>two</li>
-        <li>three</li>    
-    </ol>
-    <div>
-        <h1>Saitama</h1>
-        <p>Saitamita JR.</p>
-        <h2>genos</h2>
-        pmidoen
-    </div>
-    <a href="https://www.w3schools.com/css/css_font_pairings.asp">w3school</a>
-    <p>selectores para pseudoclases, se efocan en la estilización de las acciones que realice el usuario se escribe con : al inicio
 
-    </p>
-    <p>selectores para pseudoelementos, estos selectores nos permiten acceder a los elementos de html, que con otros tipos de selectores no sería posible. se escriben con :: al inicio</p>
+    <div>
+        <p> 
+            Con el selector adyacente se logra cambiar
+        </p>
+        el tamaño de los elementos dentro de este div que es adyacente un sección,
+        <p>
+            pero a los p se les cambia el color de la letra a rojo gracias al selector de desencientes div p
+        </p>
+
+        <ol>
+            <li>para este caso como ol es adyacente a un p y todos los ol siguentes a esta seran afectados</li>
+            <li>para este li como es el segundo de un lo le aplica un estilo en particulargracias a un crossover entreselector de descendiente y el pseudoselector de clase que se enfoca en cambiar una etiqueta en particular según la posicion</li>
+            <li>así mismo podeos ver como al incio y final de cada list item se colocan emojis gracias a otros dos pseudoselectores de elemento</li>
+            pseudoclase
+        </ol>
+    </div>
+    
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors">para más documentación de los selectores click aquí (se dió el color amarillo-verde, gracias al selector de atributo)</a>
+    <section id="imagenes">
+        <img src="./imagenes/etiquetas html5.png" alt="etiquetas html5" height="500px">
+        <img src="./imagenes/tipos de selectores.png" alt="selectores">
+    </section>
+    <section id="imagenes">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q4NAIkbg0GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
 </body>
 </html>
