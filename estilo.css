@@ -95,6 +95,7 @@ li::after{
     color: brown;
 }
 
+
 /*practica con grid*/
 
 .container{
@@ -112,18 +113,18 @@ li::after{
 }
 .item{
     display: flex;
-    background: plum;
+    background: steelblue;
     height: 40px;
     width: 100px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 5px solid rosybrown;
+    border: 5px ridge rosybrown;
     border-radius: 10px;
     margin: auto;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
+
 .container .item:nth-child(1){
     grid-column: 1/2;
 }
