@@ -45,7 +45,7 @@ div p { /*Para todos los descendientes o hijos de una etiqueta*/
 }
 
 a {
-    background: peru;
+    background:tomato;
     width: 350px;
     height: auto;
     margin: auto;
