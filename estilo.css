@@ -17,9 +17,19 @@ p::first-letter{
     font-variant-caps: small-caps;
     
 }
-
-#imagenes{
-    margin: 2rem;
+.container_img{
+    display: grid;
+    margin: 20px auto;
+    padding: 10px;
+    background: slategrey;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;   
+    
+}
+.imagenes{
+    margin: 10px auto;
+    height: 400px;
+    width: 650px;
 }
 
 #onepunchman{    /*Selector para una etiqueta en especial (ID)*/
