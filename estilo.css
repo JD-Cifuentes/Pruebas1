@@ -1,3 +1,38 @@
+body{
+    margin: 0%;
+}
+.card_container{
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.card{
+    width: 700px;
+    height: 1000px;
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+.landscapeimgprofile{
+    width: 210px;
+    height: 210px;
+    margin-top: 10%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#imgperfil{
+    width: 100%;
+}
+
 header{           /* Selector estandar para etiquetas*/
     color: blue;
     background: pink;
@@ -52,6 +87,7 @@ div p { /*Para todos los descendientes o hijos de una etiqueta*/
     height: auto;
     padding: 20px;
     margin: 20px;
+    flex-wrap: nowrap;
 }
 
 a {
