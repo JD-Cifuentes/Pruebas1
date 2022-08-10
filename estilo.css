@@ -1,3 +1,49 @@
+body{
+    margin: 0%;
+}
+.card_container{
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.card{
+    width: 700px;
+    height: 1000px;
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+}
+
+.landscapeimgprofile{
+    width: 210px;
+    height: 210px;
+    margin-top: 10%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+#imgperfil{
+    height: 100%;
+    width: 100%;
+}
+
+.card .landscapeimgprofile{
+    grid-column: span 2;
+}
+
+
+
+
 header{           /* Selector estandar para etiquetas*/
     color: blue;
     background: pink;
@@ -17,9 +63,19 @@ p::first-letter{
     font-variant-caps: small-caps;
     
 }
-
-#imagenes{
-    margin: 2rem;
+.container_img{
+    display: grid;
+    margin: 20px auto;
+    padding: 10px;
+    background: slategrey;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;   
+    
+}
+.imagenes{
+    margin: 10px auto;
+    height: 400px;
+    width: 650px;
 }
 
 #onepunchman{    /*Selector para una etiqueta en especial (ID)*/
@@ -42,6 +98,7 @@ div p { /*Para todos los descendientes o hijos de una etiqueta*/
     height: auto;
     padding: 20px;
     margin: 20px;
+    flex-wrap: nowrap;
 }
 
 a {
@@ -95,6 +152,7 @@ li::after{
     color: brown;
 }
 
+
 /*practica con grid*/
 
 .container{
@@ -112,18 +170,18 @@ li::after{
 }
 .item{
     display: flex;
-    background: plum;
+    background: steelblue;
     height: 40px;
     width: 100px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 5px solid rosybrown;
+    border: 5px ridge rosybrown;
     border-radius: 10px;
     margin: auto;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
+
 .container .item:nth-child(1){
     grid-column: 1/2;
 }
