@@ -11,22 +11,22 @@ body{
 }
 
 .card{
-    width: 700px;
-    height: 1000px;
+    width: 500px;
+    height: 600px;
     display: grid;
     background-color: white;
     border-radius: 2%;
     justify-items: center;
     overflow: hidden;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    
+    grid-template-rows: 2fr 1fr 1fr 1fr;   
+    row-gap: 0;
 }
 
 #landscapeimgprofile{
     width: 210px;
     height: 210px;
-    margin-top: 10%;
+    margin-top: 6%;
     overflow: hidden;
     border-radius: 50%;
     justify-content: center;
@@ -55,17 +55,52 @@ body{
     height: auto;
 }
 
-#profilename{
+.profiledata{
     width:100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: none;
+    background:local;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    width:fit-content;
+    height: fit-content;
+    margin: auto;
+    
 }
-#profilename > p{
-    color: black;
+.profiledata > *{
+    color: white;
     font-size: medium;
+    text-transform:capitalize;
+    margin: 0%; 
+    padding: 1%;   
+
 }
+
+.profiledata *:hover{
+    font-size: 100%;
+    color: inherit;
+    height: auto;
+    width: auto;
+}
+
+.profiledata > p::first-letter{
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.profiledata *:nth-child(1){
+    background-color:cornflowerblue;
+    font-weight: bold;
+    border-top-left-radius: 40%;
+}
+
+.profiledata *:nth-child(2){
+    background-color:rgb(135, 188, 231);
+    border-bottom-right-radius: 40%;
+}
+
 
 
 header{           /* Selector estandar para etiquetas*/
@@ -81,7 +116,7 @@ header{           /* Selector estandar para etiquetas*/
     
 }
 
-body p::first-letter{
+p::first-letter{
     font-size: xx-large;
     font-family: fantasy;
     font-variant-caps: small-caps;
