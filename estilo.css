@@ -1,3 +1,9 @@
+@media (max-width: 1000px) {
+    body{
+        background:black;
+    }
+        
+}
 body{
     margin: 0%;
 }
@@ -101,27 +107,55 @@ body{
     border-bottom-right-radius: 40%;
 }
 
+.card div:nth-child(7){
+    grid-column: span 2;
 
+}
+.websides{
+    display: flex;
+    justify-content: center;
+    background: gold;
+    margin: 20px 20px;
+    
+
+}
+.websidesblock{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: aqua;
+    width: fit-content;
+    margin: 2em;
+    padding: 0.5em;   
+    
+}
+
+.websidesblock *:hover{
+    font-size: inherit;
+    font-variant: normal;
+}
 
 header{           /* Selector estandar para etiquetas*/
     color: blue;
     background: pink;
 }
-*{      /*selector para todas las etiquetas (universal)*/ 
-    background: red;
-}
+
+
+/*{      /*selector para todas las etiquetas (universal)*/ 
+ /*   background: red;
+}*/
 
 .upper{ /* Selecciona la clase especificada (clase)*/
     background: slategray;
     
 }
 
-p::first-letter{
+/* p::first-letter{
     font-size: xx-large;
     font-family: fantasy;
     font-variant-caps: small-caps;
     
-}
+} */
 .container_img{
     display: grid;
     margin: 20px auto;
@@ -143,10 +177,10 @@ p::first-letter{
     color: blue;
 
 }
-
+/*
 div p { /*Para todos los descendientes o hijos de una etiqueta*/
-    color: red;
-}
+/*    color: red;
+}*/
 
 .url{
     display: flex;
